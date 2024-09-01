@@ -9,11 +9,10 @@ This is a solution to the [Product list with cart challenge on Frontend Mentor](
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Preview function](#preview-function)
+<!-- - [My process](#my-process)
   - [What I learned](#what-i-learned)
   - [Built with](#built-with)
-  - [Author](#author)
+  - [Author](#author) -->
 
 ## Overview
 
@@ -25,16 +24,15 @@ Users should be able to:
 
 ### Screenshot
   
-   ![Full screen](./src/assets/content-images/desktop-preview.jpg)
+   ![Full screen](./src/assets/content/preview.jpg)
 
 ### Links
 
-- Solution URL: [GitHub code solution URL](https://github.com/Kennedy-was-taken/intro-section-with-dropdown-navigation)
-- Live site Url : [Vercel QR code app](https://intro-section-with-dropdown-navigation-lilac.vercel.app)
+- Solution URL: [GitHub code solution URL](https://github.com/Kennedy-was-taken/product-list-with-cart-main)
+<!-- - Live site Url : [Vercel QR code app](https://intro-section-with-dropdown-navigation-lilac.vercel.app) -->
 
-### Preview functions
 
-#### Mobile perspective:
+<!-- #### Mobile perspective:
   - Mobile Home page
 
   ![mobile-home-page](./src/assets/content-images/mobile-home-page.PNG)
@@ -54,9 +52,9 @@ Users should be able to:
 
   - Desktop topbar active option
 
-  ![desktop-top-bar-active-options](./src/assets/content-images/desktop-top-bar-active-option.PNG)
+  ![desktop-top-bar-active-options](./src/assets/content-images/desktop-top-bar-active-option.PNG) -->
 
-### What I learned
+<!-- ### What I learned
 
   1. Creating a Click Outside Directive in Angular:
 
@@ -74,7 +72,7 @@ Users should be able to:
 
       - Refreshed understanding of CSS transformations for manipulating the positioning of HTML elements at various keyframes.
       - Employed CSS animations to define animation properties, enabling keyframes to animate according to specified parameters.
-      - By mastering these techniques, I've enhanced my ability to create dynamic and interactive user interfaces within Angular applications.
+      - By mastering these techniques, I've enhanced my ability to create dynamic and interactive user interfaces within Angular applications. -->
 
 ### Built with
 
