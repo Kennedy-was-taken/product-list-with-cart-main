@@ -31,6 +31,13 @@
     color: $color;
 }
 
+@mixin font_style_Bold($size : 18px, $weight : 400, $color : var(--Almost_Black)){
+    font-family: 'RedHatText_Bold';
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
 @mixin font_style_VariableFont($size : 18px, $weight : 400, $color : var(--Almost_Black)){
     font-family: 'RedHatText_VariableFont';
     font-size: $size;

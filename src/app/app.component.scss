@@ -1,0 +1,15 @@
+@import "../styles/fonts.scss" ;
+
+.container{
+    display: Flex;
+    flex-direction: column;
+    padding: 1em 1.5em;
+    height: 100%;
+
+    h1{
+        // @include font_style_Bold();
+        font-size: 2.5em;
+        margin: 0px;
+        font-weight: 800;
+    }
+}
