@@ -1,5 +1,7 @@
+import { Images } from "./images";
+
 export interface Category {
-    image: string[];
+    image: Images[];
     name: string;
     category: string;
     price: Number;

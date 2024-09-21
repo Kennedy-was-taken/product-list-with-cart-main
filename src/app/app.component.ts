@@ -13,7 +13,7 @@ import data from '../assets/json/data.json';
 export class AppComponent {
   title = 'product-list-with-cart-main';
 
-  items: Category[] = data;
+  // items: Category[] = data;
 
   // ngOnInit(){
   //   console.log(this.items);

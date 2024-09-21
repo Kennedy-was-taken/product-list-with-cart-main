@@ -1,23 +1,37 @@
 @font-face {
     font-family: 'RedHatText_Regular';
-    src: url('../assets/fonts/static/RedHatText-Regular.ttf');
+    src: url('../assets/fonts/RedHatText/static/RedHatText-Regular.ttf');
 }
 
 @font-face {
     font-family: 'RedHatText_VariableFont';
-    src: url('../assets/fonts/RedHatText-Italic-VariableFont_wght.ttf');
+    src: url('../assets/fonts/RedHatText/RedHatText-Italic-VariableFont_wght.ttf');
 }
 
 
 @font-face {
     font-family: 'RedHatText_SemiBold';
-    src: url('../assets/fonts/static/RedHatText-SemiBold.ttf');
+    src: url('../assets/fonts/RedHatText/static/RedHatText-SemiBold.ttf');
 }
 
+@font-face {
+    font-family: 'Istok_Web_Bold';
+    src: url('../assets/fonts/Istok_Web/IstokWeb-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Istok_Web_Regular';
+    src: url('../assets/fonts/Istok_Web/IstokWeb-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Istok_Web_italic';
+    src: url('../assets/fonts/Istok_Web/IstokWeb-Italic.ttf');
+}
 
 // defining mixing with three parameters
 @mixin font_style_Regular($size : 18px, $weight : 400, $color : var(--Almost_Black)){
-    font-family: 'RedHatText_Regular';
+    font-family: 'Istok_Web_Regular';
     font-size: $size;
     font-weight: $weight;
     color: $color;
@@ -25,14 +39,14 @@
 
 
 @mixin font_style_SemiBold($size : 18px, $weight : 400, $color : var(--Almost_Black)){
-    font-family: 'RedHatText_SemiBold';
+    font-family: 'Istok_Web_Bold';
     font-size: $size;
     font-weight: $weight;
     color: $color;
 }
 
 @mixin font_style_Bold($size : 18px, $weight : 400, $color : var(--Almost_Black)){
-    font-family: 'RedHatText_Bold';
+    font-family: 'Istok_Web_Bold';
     font-size: $size;
     font-weight: $weight;
     color: $color;
