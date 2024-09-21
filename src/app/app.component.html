@@ -4,24 +4,19 @@
 
 <section class="container">
 
-    <!-- Heading -->
-     <h1>Desserts</h1>
+    <!-- top \ left container -->
+     
 
-     <!-- Holds a list of item -->
-     <section class="item_container" *ngFor="let item of items">
+     <!-- cart container -->
+      <section class="cart_container">
 
-        <div id="test" class="item">
-            <img [src]="item.image.mobile" alt="mobile image" />
-            <p class="secondary_text">category : {{item.category}}</p>
-            <p class="top_text">name : {{item.name}}</p>
-            <p class="cost">cost : ${{item.price}}</p>
+        <h1>Your Cart (<span>0</span>)</h1>
 
-            <button class="btnAdd" type="button" (click)="AddCart(item)">
-                <img src="../assets/images/icon-add-to-cart.svg" alt="cart icons">
-                Add to Cart
-            </button>
+        <div id="no_content" class="cart_content">
+            <img src="../assets/images/illustration-empty-cart.svg" alt="empty cart" />
+            <p>Your added items will apear here</p>
         </div>
-
-     </section>
+      </section>
+     
 
 </section>

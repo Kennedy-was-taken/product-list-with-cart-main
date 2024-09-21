@@ -5,80 +5,122 @@
     flex-direction: column;
     padding: 1em 1.5em;
     height: 100%;
+    background-color: #fcf8f5;
 
-    h1{
-        @include font_style_Bold();
-        font-size: 2.5em;
-        margin: 0px;
-        font-weight: 800;
-        margin-bottom: 1.5rem;
-    }
-
-    .item_container{
-        display: flex;
+    .top_left_container{
+        display: Flex;
         flex-direction: column;
-        width: 100%;
-        height: 19em;
-        margin-bottom: 1rem;
-
-        .item{
-            
+        
+        h1{
+            @include font_style_Bold();
+            font-size: 2.5em;
+            margin: 0px;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+    
+        .item_container{
             display: flex;
             flex-direction: column;
             width: 100%;
-
-            img{
-                width: 100%;
-                border-radius: 10px;
-                margin-bottom: 1.5em;
-            }
-
-            p{
-                margin: 0;
-                margin-bottom: 5px;
-            }
-            .secondary_text{
-                @include font_style_Regular();
-                font-size: 15px;
-                color: #99918e;
-            }
-
-            .top_text{
-                @include font_style_Bold();
-                font-size: 18px;
-                color: var(--Rose_300);
-            }
-
-            .cost{
-                @include font_style_Regular();
-                font-size: 16px;
-                color: #c25c36;
-            }
-
-            .btnAdd{
+            height: 19em;
+            margin-bottom: 1rem;
+    
+            .item{
+                
                 display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                padding: 0.5rem;
-                border: 1px solid #c25c36;
-                background-color: white;
-                border-radius: 25px;
-                gap: 8px;
-                width: 50%;
-                font-weight: 600;
-                position: relative;
-                margin-left: auto;
-                margin-right: auto;
-                z-index: 1;
-                top: -133px;
+                flex-direction: column;
+                width: 100%;
     
                 img{
-                    width: 22px;
-                    margin: 0;
+                    width: 100%;
+                    border-radius: 10px;
+                    margin-bottom: 1.5em;
                 }
+    
+                p{
+                    margin: 0;
+                    margin-bottom: 5px;
+                }
+                .secondary_text{
+                    @include font_style_Regular();
+                    font-size: 15px;
+                    color: #99918e;
+                }
+    
+                .top_text{
+                    @include font_style_Bold();
+                    font-size: 18px;
+                    color: var(--Rose_300);
+                }
+    
+                .cost{
+                    @include font_style_Regular();
+                    font-size: 16px;
+                    color: #c25c36;
+                }
+    
+                .btnAdd{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0.5rem;
+                    border: 1px solid #c25c36;
+                    background-color: white;
+                    border-radius: 25px;
+                    gap: 8px;
+                    width: 50%;
+                    font-weight: 600;
+                    position: relative;
+                    margin-left: auto;
+                    margin-right: auto;
+                    z-index: 1;
+                    top: -133px;
+        
+                    img{
+                        width: 22px;
+                        margin: 0;
+                    }
+                }
+            }
+    
+        }
+    }
+
+    .cart_container{
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: white;
+        padding: 0.5em 1em;
+
+        h1{
+            @include font_style_Bold(1.5rem, 600);
+            color: #c25c36;
+            margin-bottom: 1.5rem;
+            
+        }
+
+        .cart_content{
+
+            display: flex;
+            flex-direction: column;
+
+            p{
+                @include font_style_Bold(0.8rem);
+                color: #aca29d;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            img{
+                width: 55%;
+                margin-right: auto;
+                margin-left: auto;
             }
         }
 
     }
+ 
 }
