@@ -1,0 +1,7 @@
+@import "../../styles/fonts.scss" ;
+
+@media(min-width : $tablets){
+    .container {
+        display: none !important;
+    }
+}

@@ -1,0 +1,7 @@
+@import "../../styles/fonts.scss" ;
+
+@media(min-width : $lg_tablets){
+    .container {
+        display: flex !important;
+    }
+}

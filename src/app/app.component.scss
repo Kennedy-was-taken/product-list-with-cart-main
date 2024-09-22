@@ -1,6 +1,9 @@
 @import "../styles/fonts.scss" ;
-
-
+@import "../styles/device_dimensions.scss";
+@import "./styles/tablet_revolutions.scss";
+@import "./styles/lg_tablet_revolution.scss";
+@import "./styles/desktop_revolution.scss";
+@import "./styles/lg_desktop_revolution.scss";
 
 .container{
     display: Flex;
@@ -160,3 +163,10 @@
     }
  
 }
+
+
+
+
+
+
+
