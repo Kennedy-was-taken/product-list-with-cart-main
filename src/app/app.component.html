@@ -9,41 +9,43 @@
 
         <h1>Desserts</h1>
 
-        <!-- Holds a list of item -->
-        <section class="item_container" *ngFor="let item of items; let i = index">
-
-            <div id="{{item.name}}" class="item">
-                <img [src]="item.image.desktop" alt="mobile image" id="{{item.category}}" style="border: unset"/>
-                <p class="secondary_text">{{item.category}}</p>
-                <p class="top_text">{{item.name}}</p>
-                <p class="cost">${{item.price}}</p>
-
-                <button id="add_to_cart_{{item.category}}" class="btnAdd" type="button" (click)="AddCart(item, i)">
-                    <img src="../assets/images/icon-add-to-cart.svg" alt="cart icons">
-                    Add to Cart
-                </button>
-
-                <div id="more_to_cart_{{item.category}}" class="btnAddMore" style="display: none">
-                    <button type="button" (click)="decreaseCart(item)"><img src="../assets/images/icon-decrement-quantity.svg" alt="subtract item icon"> </button>
-                    <span id="quantity_{{item.category}}">1</span>
-                    <button type="button" (click)="IncreaseCart(item)"><img src="../assets/images/icon-increment-quantity.svg" alt="add item icon"></button>
+        <section class="container_list">
+            <!-- Holds a list of item -->
+            <section class="item_container" *ngFor="let item of items; let i = index">
+    
+                <div id="{{item.name}}" class="item">
+                    <img [src]="item.image.desktop" alt="mobile image" id="{{item.category}}" style="border: unset"/>
+                    <p class="secondary_text">{{item.category}}</p>
+                    <p class="top_text">{{item.name}}</p>
+                    <p class="cost">${{item.price}}</p>
+    
+                    <button id="add_to_cart_{{item.category}}" class="btnAdd" type="button" (click)="AddCart(item, i)">
+                        <img src="../assets/images/icon-add-to-cart.svg" alt="cart icons">
+                        Add to Cart
+                    </button>
+    
+                    <div id="more_to_cart_{{item.category}}" class="btnAddMore" style="display: none">
+                        <button type="button" (click)="decreaseCart(item)"><img src="../assets/images/icon-decrement-quantity.svg" alt="subtract item icon"> </button>
+                        <span id="quantity_{{item.category}}">1</span>
+                        <button type="button" (click)="IncreaseCart(item)"><img src="../assets/images/icon-increment-quantity.svg" alt="add item icon"></button>
+                    </div>
                 </div>
-            </div>
-
+    
+            </section>
         </section>
+        
+    </section>
+    
+    <!-- cart container -->
+     <section class="cart_container">
 
+       <h1>Your Cart (<span>0</span>)</h1>
+
+       <div id="no_content" class="cart_content">
+           <img src="../assets/images/illustration-empty-cart.svg" alt="empty cart" />
+           <p>Your added items will apear here</p>
+       </div>
      </section>
-
-     <!-- cart container -->
-      <section class="cart_container">
-
-        <h1>Your Cart (<span>0</span>)</h1>
-
-        <div id="no_content" class="cart_content">
-            <img src="../assets/images/illustration-empty-cart.svg" alt="empty cart" />
-            <p>Your added items will apear here</p>
-        </div>
-      </section>
      
 
 </section>

@@ -2,4 +2,80 @@
 
 @media(min-width : $desktops){
 
+    .container{
+        display: grid !important;
+        grid-template-columns: 70% 1fr !important;
+        gap: 2rem !important;
+        
+        .top_left_container{
+
+            .container_list{
+                display: grid !important;
+                grid-template-columns: 31% 31% 31% !important;
+                gap: 2rem !important;
+
+                .item_container{
+                    
+                    .item{
+
+                        .secondary_text{
+                            font-size: 1.1rem !important;
+                        }
+            
+                        .top_text{
+                            font-size: 1.2rem !important;
+                        }
+            
+                        .cost{
+                            font-size: 1.2rem !important;
+                        }
+    
+                        .btnAdd, .btnAddMore{
+                            gap: 1em !important;
+                            top: -8.5rem !important;
+                            font-size: 0.7rem !important;
+                
+                            img{
+                                width: 1.3rem !important;
+                            }
+                        }
+    
+                        .btnAddMore{
+                            top: -9rem !important;
+                            font-size: 0.9rem !important;
+
+                            button{
+                                height: 1.6rem !important;
+                                width: 1.6rem !important;
+                                border-radius: 0.9rem !important;
+        
+                                img{
+                                    width: 0.6rem !important;
+                                }
+                            }
+        
+                        }
+    
+                    }
+                }
+
+            }
+        }
+
+        .cart_container{
+            height: fit-content !important;
+            padding: 1.2em 1.5em !important;
+            
+            h1{
+                font-size: 1.5em !important;
+            }
+            
+            .cart_content{
+
+                p{
+                    font-size: 1rem !important;
+                }
+            }
+        }
+    }
 }
