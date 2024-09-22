@@ -4,8 +4,6 @@ import { Category } from './interface/category';
 import { NgFor, NgStyle } from '@angular/common';
 import { LogicService } from './service/logic/logic.service';
 import { Goods } from './interface/goods';
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-
 import data from '../assets/json/data.json';
 
 @Component({
@@ -18,7 +16,7 @@ import data from '../assets/json/data.json';
 export class AppComponent {
   title = 'product-list-with-cart-main';
 
-  constructor(private service : LogicService, private breakpointObserver : BreakpointObserver){}
+  constructor(private service : LogicService){}
 
   itemNumber : number | undefined;
 
