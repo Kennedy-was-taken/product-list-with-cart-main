@@ -74,6 +74,12 @@ export class LogicService {
     }
   }
 
+  public removeItem(cart : Goods){
+    const index = this.items.findIndex(x => x.name === cart.name && x.category === cart.category);
+
+    this.items.splice(index);
+  }
+
 
   public returnItemArray() : Goods[]{
     return this.items;

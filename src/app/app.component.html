@@ -48,7 +48,7 @@
                     <p class="quantity">{{cartItem.quantity}}x</p>
                     <p class="quantity_price">${{cartItem.price}}</p>
                     <p class="quantity_total">${{cartItem.total}}</p>
-                    <button type="button" class="quantity_close"><img src="../assets/images/icon-remove-item.svg"/></button>
+                    <button type="button" class="quantity_close"><img src="../assets/images/icon-remove-item.svg" (click)="removeItem(cartItem)"/></button>
                 </div>
             </div>
             

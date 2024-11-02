@@ -123,6 +123,33 @@ export class AppComponent {
     this.totalCost += item.price;
   }
 
+  public removeItem(cartList : Goods) : void {
+    const divId =  document.getElementById(cartList.category) as HTMLElement;
+    const addBtn = document.getElementById('add_to_cart_' + cartList.category) as HTMLElement;
+    const moreBtn = document.getElementById('more_to_cart_' + cartList.category) as HTMLElement;
+    let subtractQuantity = document.getElementById('quantity_' + cartList.category) as HTMLElement;
+
+
+    //revert back to default value
+    subtractQuantity.innerText = "1";
+
+    //switch to the first button
+    addBtn.style.display = "flex"
+    moreBtn.style.display = "none";
+
+    //unset the border color
+    divId.style.border = "unset" ;
+
+    this.service.removeItem(cartList);
+
+    this.totalCost -= cartList.total;
+
+    this.itemNumber -= 1;
+
+    this.getItemList();
+
+  }
+
   ngOnInit() : void{
     this.items = data;
   }
