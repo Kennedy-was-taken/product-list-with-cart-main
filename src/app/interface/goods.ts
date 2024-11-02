@@ -4,4 +4,5 @@ export interface Goods{
     category: string;
     total: number;
     quantity: number;
+    price:number;
 }

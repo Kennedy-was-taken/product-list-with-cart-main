@@ -25,9 +25,9 @@
                     </button>
     
                     <div id="more_to_cart_{{item.category}}" class="btnAddMore" style="display: none">
-                        <button type="button" (click)="decreaseCart(item)"><img src="../assets/images/icon-decrement-quantity.svg" alt="subtract item icon"> </button>
+                        <button type="button" (click)="decreaseCart(item)" class="hover"><img src="../assets/images/icon-decrement-quantity.svg" alt="subtract item icon"> </button>
                         <span id="quantity_{{item.category}}">1</span>
-                        <button type="button" (click)="IncreaseCart(item)"><img src="../assets/images/icon-increment-quantity.svg" alt="add item icon"></button>
+                        <button type="button" (click)="IncreaseCart(item)" class="hover"><img src="../assets/images/icon-increment-quantity.svg" alt="add item icon"></button>
                     </div>
                 </div>
     
@@ -39,12 +39,43 @@
     <!-- cart container -->
      <section class="cart_container">
 
-       <h1>Your Cart (<span>0</span>)</h1>
+        <section *ngIf="confirm_order == true">
+            <h1>Your Cart (<span>{{itemNumber}}</span>)</h1>
 
-       <div id="no_content" class="cart_content">
-           <img src="../assets/images/illustration-empty-cart.svg" alt="empty cart" />
-           <p>Your added items will apear here</p>
-       </div>
+            <div *ngFor="let cartItem of cartList; let i = index">
+                <p class="quantity_name">{{cartItem.name}}</p>
+                <div class="item_container">
+                    <p class="quantity">{{cartItem.quantity}}x</p>
+                    <p class="quantity_price">${{cartItem.price}}</p>
+                    <p class="quantity_total">${{cartItem.total}}</p>
+                    <button type="button" class="quantity_close"><img src="../assets/images/icon-remove-item.svg"/></button>
+                </div>
+            </div>
+            
+            <div class="total_order">
+                <p>Order Total</p>
+                <p class="cost">${{totalCost}}</p>
+            </div>
+
+            <div class="watermark">
+                <img src="../assets/images/icon-carbon-neutral.svg" />
+                <p>This is a <span style="font-weight: 600;">carbon-neutral</span> delivery</p>
+            </div>
+
+            <button type="button" class="confirm_order">Confirm Order</button>
+
+        </section>
+
+        <section *ngIf="confirm_order == false">
+            <h1>Your Cart (<span>0</span>)</h1>
+
+            <div id="no_content" class="cart_content">
+                <img src="../assets/images/illustration-empty-cart.svg" alt="empty cart" />
+                <p>Your added items will apear here</p>
+            </div>
+        </section>
+
+       
      </section>
      
 

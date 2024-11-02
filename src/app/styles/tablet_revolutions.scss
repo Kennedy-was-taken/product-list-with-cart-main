@@ -1,4 +1,7 @@
 @import "../../styles/fonts.scss" ;
+@import "./lg_tablet_revolution.scss";
+@import "./desktop_revolution.scss";
+@import "./lg_desktop_revolution.scss";
 
 @media(min-width : $tablets){
     .container {
@@ -52,10 +55,11 @@
         }
 
         .cart_container{
+            
             padding: 1em 1.5em !important;
             
             h1{
-                font-size: 2em !important;
+                font-size: 2.5em !important;
             }
             
             .cart_content{
@@ -63,6 +67,53 @@
                 p{
                     font-size: 1.2rem !important;
                 }
+            }
+
+            .quantity_name{
+                font-size: 1.5rem !important;
+            }
+    
+            .item_container{
+                column-gap: 0.8rem !important;
+                font-size: 1.3rem !important;
+    
+                .quantity{
+                    margin-right: 1rem !important;
+                }
+                
+                // .quantity_price{
+    
+                // }
+    
+                .quantity_close{
+                    border-width: 0.9px !important;
+                }
+            }
+    
+            .total_order{
+    
+                p{
+                    font-size: 1rem !important;
+                }
+    
+                .cost{
+                    font-size: 2rem !important;
+                }
+            }
+    
+            .watermark{
+                height: 3.5rem !important;
+                border-radius: 10px !important;
+                font-size: 1rem !important;
+    
+                img{
+                    margin-right: 10px;
+                }
+            }
+    
+            .confirm_order{
+                font-size: 1rem !important;
+                height: 3rem !important;
             }
         }
     }

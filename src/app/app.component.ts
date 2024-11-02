@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Category } from './interface/category';
-import { NgFor, NgStyle } from '@angular/common';
+import { NgFor, NgStyle, NgIf } from '@angular/common';
 import { LogicService } from './service/logic/logic.service';
 import { Goods } from './interface/goods';
 import data from '../assets/json/data.json';
@@ -9,7 +9,7 @@ import data from '../assets/json/data.json';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, NgStyle],
+  imports: [RouterOutlet, NgFor, NgStyle, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -18,13 +18,17 @@ export class AppComponent {
 
   constructor(private service : LogicService){}
 
-  itemNumber : number | undefined;
+  itemNumber : number = 0;
 
   items: Category[] | undefined ;
 
-  cartList: Goods[] | undefined;
+  cartList: Goods[] | undefined; // need this data
 
   selecteData = data[0];
+
+  confirm_order = false;
+
+  totalCost : number = 0;
 
   //used to display items in the cart
   public getItemList() : void {
@@ -46,11 +50,26 @@ export class AppComponent {
     this.service.addItem(item);
 
     //increase item
-    this.service.increaseItem(item);
+    // this.service.increaseItem(item);
 
     //sets the border color
     divId.style.border = "2px solid #c25c36" ;
-    
+
+    this.getItemList();
+
+    //increase item added onto cart
+    this.itemNumber += 1;
+
+    //dictates whether one of two forms of the cart gets displayed
+    this.confirm_order = true;
+
+    //adds to the total cost of the item
+    this.totalCost += item.price;
+
+    console.log("item values")
+    console.log(item)
+    console.log("added item values")
+    console.log(this.cartList)
   }
 
   public decreaseCart(item : Category) : void{
@@ -70,6 +89,8 @@ export class AppComponent {
 
       //unset the border color
       divId.style.border = "unset" ;
+
+      this.itemNumber -= 1;
     }
 
     else{
@@ -81,6 +102,11 @@ export class AppComponent {
       else{
         subtractQuantity.innerText = String(Number(subtractQuantity.innerText) - 1);
       }
+
+      this.getItemList();
+
+      //adds to the total cost of the item
+      this.totalCost -= item.price;
     }
   }
 
@@ -90,6 +116,11 @@ export class AppComponent {
     this.service.increaseItem(item);
 
     addQuantity.innerText = String(Number(addQuantity.innerText) + 1);
+
+    this.getItemList();
+
+    //adds to the total cost of the item
+    this.totalCost += item.price;
   }
 
   ngOnInit() : void{

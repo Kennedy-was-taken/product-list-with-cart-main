@@ -11,6 +11,7 @@ export class LogicService {
 
   items : Goods[] = [];
 
+
   //add to list
   public addItem(item : Category) : void{
 
@@ -19,6 +20,7 @@ export class LogicService {
       category: item.category,
       total: item.price,
       quantity: 1,
+      price: item.price
     };
 
     this.items.push(itemGoods);
@@ -33,6 +35,7 @@ export class LogicService {
         category: this.items[index].category,
         total: this.items[index].total + item.price,
         quantity: this.items[index].quantity + 1,
+        price: this.items[index].price
       };
       
       this.items[index] = quantityIncreased;
@@ -53,6 +56,7 @@ export class LogicService {
           category: this.items[index].category,
           total: this.items[index].total - item.price,
           quantity: this.items[index].quantity - 1,
+          price: this.items[index].price
         };
         
         this.items[index] = quantityReduce
@@ -69,6 +73,7 @@ export class LogicService {
       return false;
     }
   }
+
 
   public returnItemArray() : Goods[]{
     return this.items;
