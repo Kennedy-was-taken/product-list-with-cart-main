@@ -9,10 +9,10 @@ This is a solution to the [Product list with cart challenge on Frontend Mentor](
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-<!-- - [My process](#my-process)
-  - [What I learned](#what-i-learned)
+- [My process](#my-process)
+  <!-- - [What I learned](#what-i-learned) -->
   - [Built with](#built-with)
-  - [Author](#author) -->
+  - [Author](#author)
 
 ## Overview
 
@@ -29,30 +29,34 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub code solution URL](https://github.com/Kennedy-was-taken/product-list-with-cart-main)
-<!-- - Live site Url : [Vercel QR code app](https://intro-section-with-dropdown-navigation-lilac.vercel.app) -->
+- Live site Url : [Vercel QR code app](https://product-list-with-cart-main-azure.vercel.app/)
 
 
-<!-- #### Mobile perspective:
+#### Mobile perspective:
   - Mobile Home page
 
-  ![mobile-home-page](./src/assets/content-images/mobile-home-page.PNG)
+  ![mobile-home-page](./src/assets/content/mobile-design-empty.jpg)
 
-  - Mobile Sidebar
+  - Mobile item selected
 
-  ![mobile-side-ba](./src/assets/content-images/mobile-side-bar.PNG)
+  ![mobile-design-selected](./src/assets/content/mobile-design-selected.jpg)
 
-  - Mobile Sidebar active options
+  - Mobile Purchase conformed
 
-  ![mobile-side-bar-active-options](./src/assets/content-images/mobile-side-bar-active-options.PNG)
+  ![mobile-design-order-confirmation](./src/assets/content/mobile-design-order-confirmation.jpg)
 
 #### Desktop perspective:
   - Desktop Home page
 
-  ![desktop-home-page](./src/assets/content-images/desktop-home-page.PNG)
+  ![desktop-home-page](./src/assets/content/desktop-design-empty.jpg)
 
-  - Desktop topbar active option
+  - Desktop item selected
 
-  ![desktop-top-bar-active-options](./src/assets/content-images/desktop-top-bar-active-option.PNG) -->
+  ![desktop-design-selected](./src/assets/content/desktop-design-selected.jpg)
+
+  - Desktop Purchase conformed
+
+  ![desktop-design-order-confirmation](./src/assets/content/desktop-design-order-confirmation.jpg)
 
 <!-- ### What I learned
 
