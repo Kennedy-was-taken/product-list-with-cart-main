@@ -1,3 +1,4 @@
+import { Images } from "./images";
 
 export interface Goods{
     name: string;
@@ -5,4 +6,5 @@ export interface Goods{
     total: number;
     quantity: number;
     price:number;
+    image: Images ;
 }

@@ -2,7 +2,23 @@
 
 @media(min-width : $lg_desktops){
 
-    .overlay {
-        height: 200% !important;
+  .container{
+    
+    .top_left_container{
+
+      .container_list{
+
+        .item_container{   
+          height: 27em !important;
+        }
+
       }
+
+    }
+    
+  }
+
+  .overlay {
+    height: 200% !important;
+  }
 }

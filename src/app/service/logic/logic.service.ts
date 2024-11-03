@@ -20,7 +20,8 @@ export class LogicService {
       category: item.category,
       total: item.price,
       quantity: 1,
-      price: item.price
+      price: item.price,
+      image: item.image
     };
 
     this.items.push(itemGoods);
@@ -35,7 +36,8 @@ export class LogicService {
         category: this.items[index].category,
         total: this.items[index].total + item.price,
         quantity: this.items[index].quantity + 1,
-        price: this.items[index].price
+        price: this.items[index].price,
+        image: this.items[index].image
       };
       
       this.items[index] = quantityIncreased;
@@ -56,7 +58,8 @@ export class LogicService {
           category: this.items[index].category,
           total: this.items[index].total - item.price,
           quantity: this.items[index].quantity - 1,
-          price: this.items[index].price
+          price: this.items[index].price,
+          image: this.items[index].image
         };
         
         this.items[index] = quantityReduce
@@ -74,10 +77,14 @@ export class LogicService {
     }
   }
 
-  public removeItem(cart : Goods){
+  public removeItem(cart : Goods) : void{
     const index = this.items.findIndex(x => x.name === cart.name && x.category === cart.category);
 
     this.items.splice(index);
+  }
+
+  public clearGoods() : void{
+    this.items.length = 0;
   }
 
 

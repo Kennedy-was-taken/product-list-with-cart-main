@@ -22,13 +22,15 @@ export class AppComponent {
 
   items: Category[] | undefined ;
 
-  cartList: Goods[] | undefined; // need this data
+  cartList: Goods[] = []; // need this data
 
   selecteData = data[0];
 
   confirm_order = false;
 
   totalCost : number = 0;
+
+  showPopup = true;
 
   //used to display items in the cart
   public getItemList() : void {
@@ -66,10 +68,6 @@ export class AppComponent {
     //adds to the total cost of the item
     this.totalCost += item.price;
 
-    console.log("item values")
-    console.log(item)
-    console.log("added item values")
-    console.log(this.cartList)
   }
 
   public decreaseCart(item : Category) : void{
@@ -147,6 +145,59 @@ export class AppComponent {
     this.itemNumber -= 1;
 
     this.getItemList();
+
+  }
+
+  public confirmed_order() : void {
+    const popup = document.getElementById('popup') as HTMLElement;
+    const background = document.getElementById('overlay') as HTMLElement;
+
+    //removes popup
+    popup.style.display = "flex";
+    background.style.display = "flex";
+
+    console.log("i was caught");
+
+  }
+
+  public new_order() : void {
+
+    const popup = document.getElementById('popup') as HTMLElement;
+    const background = document.getElementById('overlay') as HTMLElement;
+
+    for(let items of this.cartList){
+      const divId =  document.getElementById(items.category) as HTMLElement;
+      let subtractQuantity = document.getElementById('quantity_' + items.category) as HTMLElement;
+      const addBtn = document.getElementById('add_to_cart_' + items.category) as HTMLElement;
+      const moreBtn = document.getElementById('more_to_cart_' + items.category) as HTMLElement;
+
+      //switch to the first button
+      moreBtn.style.display = "none";
+      addBtn.style.display = "flex"
+
+      //unset the border color
+      divId.style.border = "unset" ;
+
+      //revert back to default value
+      subtractQuantity.innerText = "1";
+
+    }
+
+    //clears the goods array
+    this.service.clearGoods()
+
+    this.getItemList();
+
+    //empties cart
+    this.confirm_order = false;
+
+    this.itemNumber = 0;
+
+    this.totalCost = 0;
+
+    //removes popup
+    popup.style.display = "none";
+    background.style.display = "none";
 
   }
 

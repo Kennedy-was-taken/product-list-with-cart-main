@@ -138,7 +138,7 @@
         position: absolute !important;
         top: 30% !important;
         left: 30%  !important;
-        height: 50% !important;
+        height: fit-content !important;
         border-radius: 1.5rem !important;
         width: 35% !important;
 
@@ -196,6 +196,17 @@
 
             }
 
+        }
+
+        .total_container{
+
+            .order_total{
+                font-size: 1rem !important;
+            }
+
+            .grand_total{
+                font-size: 1.4rem !important;
+            }
         }
 
         .btn_new_order{

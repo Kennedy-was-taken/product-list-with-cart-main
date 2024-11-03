@@ -64,7 +64,7 @@
                 <p>This is a <span style="font-weight: 600;">carbon-neutral</span> delivery</p>
             </div>
 
-            <button type="button" class="confirm_order">Confirm Order</button>
+            <button type="button" class="confirm_order" (click)="confirmed_order()">Confirm Order</button>
 
         </section>
 
@@ -83,10 +83,10 @@
 </section>
     
 <!-- Overlay -->
-<div class="overlay"></div>
+<div class="overlay" id="overlay"></div>
 
 <!-- popup -->
- <section class="popup">
+ <section class="popup" id="popup">
 
     <!-- logo -->
     <img src="../assets/images/icon-order-confirmed.svg"/>
@@ -100,28 +100,33 @@
     <!-- item container -->
      <section class="order_container">
 
-        <div class="order_item">
+        <div class="order_item" *ngFor="let item of cartList">
 
-            <img src="../assets/images/image-baklava-desktop.jpg"/>
+            <img [src]="item.image.desktop" alt="desktop image"/>
 
             <div class="middle_grid">
 
-                <p class="name">Classic Tiramisu</p>
+                <p class="name">{{item.name}}</p>
                 
                 <div class="properites">
-                    <p class="quantity">1x</p>
-                    <p class="cost">$5.50</p>
+                    <p class="quantity">{{item.quantity}}x</p>
+                    <p class="cost">${{item.price}}</p>
                 </div>
 
             </div>
 
-            <p class="total">$5.50</p>
+            <p class="total">${{item.total}}</p>
 
+        </div>
+
+        <div class="total_container">
+            <p class="order_total">Order Total</p>
+            <p class="grand_total">${{totalCost}}</p>
         </div>
 
      </section>
 
     <!-- new order button -->
-    <button type="button" class="btn_new_order">Start new Order</button>
+    <button type="button" class="btn_new_order" (click)="new_order()">Start new Order</button>
     
  </section>
