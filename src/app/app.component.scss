@@ -274,8 +274,137 @@
         }
 
     }
+
+    
  
 }
+
+.overlay{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 5;
+    height: 505dvh;
+
+}
+
+.popup{
+    display: flex;
+    flex-direction: column;
+    column-gap: 1rem;
+    padding: 2.5rem 2.5rem;
+    position:sticky;
+    bottom: 0;
+    height: 88%;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: white;
+    z-index: 6;
+
+    img{
+        width: 15%;
+        margin-bottom: 1rem;
+    }
+
+    .something{
+        @include font_style_SemiBold(2.5rem, 400);
+        margin: 0;
+        margin-bottom: 0;
+    }
+
+    p{
+        @include font_style_Regular(1rem, unset, #b0a4a2);
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .order_container{
+        display: flex;
+        flex-direction: row;
+        row-gap: 2rem;
+        background-color: #fcf8f5;
+        border-radius: 1rem;
+        padding: 1rem 0.5rem;
+        margin-bottom: 1rem;
+
+        .order_item{
+            display: grid;
+            grid-template-columns: 25% 1fr 25%;
+            border-bottom: 1px solid #b0a4a26b;
+            width: 100%;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            padding-bottom: 0.7rem;
+            align-items: center;
+
+            img{
+                width: 70%;
+                border-radius: 10%;
+                margin: 0;
+            }
+
+            .middle_grid{
+                display: flex;
+                flex-direction: column;
+                column-gap: 1rem;
+
+                .name{
+                    @include font_style_Bold(0.8rem, 500);
+                    margin: 0;
+                    margin-bottom: 0.5rem;
+                }
+
+                .properites{
+                    display: flex;
+                    flex-direction: row;
+                    row-gap: 1rem;
+
+                    .quantity{
+                        @include font_style_Regular(0.9rem, 400, #c83b0e);
+                        margin: 0;
+                        margin-right: 1.2rem;
+                    }
+
+                    .cost{
+                        @include font_style_Regular(0.9rem, 400);
+                        margin: 0;
+                        color: #bfb8b8;
+                    }
+                }
+
+            }
+
+            .total{
+                @include font_style_Bold(1.1rem, 500, #685f5a);
+                margin: 0;
+                text-align: end;
+            }
+
+        }
+
+    }
+
+    .btn_new_order{
+        width: 100%;
+        height: 3rem;
+        text-align: center;
+        border-radius: 2rem;
+        background-color: #c83b0e;
+        border-color: #c83b0e;
+
+        @include font_style_Bold(1rem, 400, white)
+    }
+
+    .btn_new_order:hover{
+        cursor: pointer;
+    }
+}
+
+
 
 
 

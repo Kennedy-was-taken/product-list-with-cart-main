@@ -117,4 +117,65 @@
             }
         }
     }
+
+    .popup{
+    
+        height: 86% !important;
+
+        img{
+            width: 10% !important;
+        }
+
+        .something{
+            font-size: 3.5rem !important;
+        }
+
+        p{
+            font-size: 1.5rem !important;
+        }
+
+        .order_container{
+            
+            .order_item{
+                
+                img{
+                    width: 50% !important;
+                }
+
+                .middle_grid{
+    
+                    .name{
+                        font-size: 1.5rem !important;
+                        margin-bottom: 1rem !important;
+                    }
+    
+                    .properites{
+    
+                        .quantity{
+                            font-size: 1.5rem !important;
+                            margin-right: 4rem !important;
+                        }
+    
+                        .cost{
+                            font-size: 1.5rem !important;
+                        }
+                    }
+    
+                }
+
+                .total{
+                    font-size: 1.5rem !important;
+                }
+            }
+        }
+    
+        .btn_new_order{
+            height: 3.3rem !important;
+            border-radius: 2rem !important;
+            @include font_style_Bold(1.5rem, 400, white)
+        }
+    
+    }
+
 }
+
